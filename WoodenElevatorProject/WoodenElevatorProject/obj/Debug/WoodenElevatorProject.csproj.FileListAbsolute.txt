@@ -1,0 +1,9 @@
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\bin\Debug\WoodenElevatorProject.exe.config
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\bin\Debug\WoodenElevatorProject.exe
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\bin\Debug\WoodenElevatorProject.pdb
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.csprojAssemblyReference.cache
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.Form1.resources
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.Properties.Resources.resources
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.csproj.GenerateResource.cache
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.exe
+C:\Users\Prakriti Shrestha\source\repos\WoodenElevatorProject\WoodenElevatorProject\obj\Debug\WoodenElevatorProject.pdb
