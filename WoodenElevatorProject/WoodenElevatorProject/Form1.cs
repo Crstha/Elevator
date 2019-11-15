@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech;
+using System.Speech.Synthesis;
 using System.Windows.Forms;
 
 namespace WoodenElevatorProject
@@ -24,6 +26,8 @@ namespace WoodenElevatorProject
 
         bool arrivedAtGf = false;
         bool arrivedAt1f = false;
+
+        SpeechSynthesizer reader = new SpeechSynthesizer();
 
         public Form1()
         {
@@ -57,8 +61,12 @@ namespace WoodenElevatorProject
 
                 if (liftGoDown == true)
                 {
+                   picMainDisplay.Image = global::WoodenElevatorProject.Properties.Resources.down;
+                   pic1display.Image = global::WoodenElevatorProject.Properties.Resources.down;
+                   picGdisplay.Image = global::WoodenElevatorProject.Properties.Resources.down;
                    TimerLiftDown.Enabled = true;
-                    liftGoDown = false;
+                   liftGoDown = false;
+                    reader.Speak("Going down");
                 }
             }
         }
@@ -81,11 +89,12 @@ namespace WoodenElevatorProject
                 GFloorDoorOpen();
                 arrivedAtGf = true;
 
-                //pnlLift.Image = global::ElevatorControl.Properties.Resources.Inside_of_the_lift;
+                
 
-                //display_panel.Image = global::ElevatorControl.Properties.Resources._1;
-                //display_top.Image = global::ElevatorControl.Properties.Resources._1;
-                //display_bottom.Image = global::ElevatorControl.Properties.Resources._1;
+                picMainDisplay.Image = global::WoodenElevatorProject.Properties.Resources.G;
+                pic1display.Image = global::WoodenElevatorProject.Properties.Resources.G;
+                picGdisplay.Image = global::WoodenElevatorProject.Properties.Resources.G;
+               
             }
 
 
@@ -106,6 +115,14 @@ namespace WoodenElevatorProject
                 btnOpen.Enabled = true;
                 btnUp.BackColor = Color.White;
                 btn1.BackColor = Color.White;
+
+                
+
+                picMainDisplay.Image = global::WoodenElevatorProject.Properties.Resources._1;
+                pic1display.Image = global::WoodenElevatorProject.Properties.Resources._1;
+                picGdisplay.Image = global::WoodenElevatorProject.Properties.Resources._1;
+
+                
 
                 FirstFloorDoorOpen();
                 arrivedAt1f = true;
@@ -138,6 +155,12 @@ namespace WoodenElevatorProject
 
                 if (liftGoUp == true)
                 {
+                    picMainDisplay.Image = global::WoodenElevatorProject.Properties.Resources.up;
+                    pic1display.Image = global::WoodenElevatorProject.Properties.Resources.up;
+                    picGdisplay.Image = global::WoodenElevatorProject.Properties.Resources.up;
+
+                    reader.Speak(" Going up");
+
                     TimerLiftUp.Enabled = true;
                     liftGoUp = false;
                 }
@@ -146,17 +169,20 @@ namespace WoodenElevatorProject
 
         private void GFloorDoorClose()
         {
+            reader.Speak("Ground floor, doors closing");
             TimerGFloorDoorClose.Enabled = true;
             TimerGFloorDoorOpen.Enabled = false;
         }
         private void GFloorDoorOpen()
         {
+            reader.Speak("Ground floor, doors opening");
             TimerGFloorDoorClose.Enabled = false;
             TimerGFloorDoorOpen.Enabled = true;
         }
 
         private void FirstFloorDoorClose()
         {
+            reader.Speak("First floor, doors closing");
             TimerFirstFloorDoorClose.Enabled = true;
             TimerFirstFloorDoorOpen.Enabled = false;
 
@@ -164,6 +190,7 @@ namespace WoodenElevatorProject
 
         private void FirstFloorDoorOpen()
         {
+            reader.Speak("First floor, doors opening");
             TimerFirstFloorDoorClose.Enabled = false;
             TimerFirstFloorDoorOpen.Enabled = true;
         }
@@ -193,6 +220,7 @@ namespace WoodenElevatorProject
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
+         
             if (arrivedAt1f == true)
             {
                 FirstFloorDoorOpen();
@@ -201,6 +229,7 @@ namespace WoodenElevatorProject
             {
                 GFloorDoorOpen();
             }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -229,7 +258,7 @@ namespace WoodenElevatorProject
 
         private void btnAlarm_Click(object sender, EventArgs e)
         {
-            btnAlarm.BackColor = Color.Green;
+            btnAlarm.BackColor = Color.Red;
             TimerFirstFloorDoorOpen.Enabled = true;
             TimerGFloorDoorOpen.Enabled = true;
             TimerFirstFloorDoorClose.Enabled = false;

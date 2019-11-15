@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,6 +113,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WoodenTexture1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnalarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
